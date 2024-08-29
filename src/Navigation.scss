@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #30404e;
+    background-color: #222222;
 }
 
 button, li, img {
@@ -29,7 +29,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #65839e;
+    background-color: rgb(28, 28, 28);
     width: 400px;
     height: 40px;
     border-radius: 20px;
@@ -44,7 +44,7 @@ nav ul li {
     border-radius: 20px;
 }nav ul li:hover {
     color: white;
-    background-color: #30404e;
+    background-color: #515151;
 }
 
 button {
