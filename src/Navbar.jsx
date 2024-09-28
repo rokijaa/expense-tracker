@@ -17,25 +17,30 @@ export function Navbar() {
   return (
     <nav className="nav">
       <a href="#" className="nav__brand">
+        <ion-icon name="wallet"/>
         CashTrack
       </a>
       <ul className={active}>
         <li className="nav__item">
+          <ion-icon name="home-outline"/>
           <a href="#" className="nav__link">
             Dashboard
           </a>
         </li>
         <li className="nav__item">
+          <ion-icon name="stats-chart"/>
           <a href="#" className="nav__link">
             Expenses
           </a>
         </li>
         <li className="nav__item">
+          <ion-icon name="pie-chart-outline"/>
           <a href="#" className="nav__link">
             Reports
           </a>
         </li>
         <li className="nav__item">
+          <ion-icon name="settings-outline"/>
           <a href="#" className="nav__link">
             Settings
           </a>

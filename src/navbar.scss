@@ -32,18 +32,31 @@ a{
     align-items: center;
     justify-content: space-around;
     height: 8vh;
-    background: rgb(103, 36, 36);
 }
 .nav__brand{
+    display: flex;
     text-transform: uppercase;
+    font-size: x-large;
     font-weight: bold;
     color: black;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
 }
 .nav__menu{
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 3rem;
+}
+.nav__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav__icons{
+  margin: 10px;
 }
 .nav__toggler div{
     width: 2.5rem;
