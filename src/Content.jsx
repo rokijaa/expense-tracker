@@ -6,7 +6,7 @@ export function Content() {
     return(
         <div className="cont__user">
             <h1 className="cont__networth"></h1>
-            <PieChart
+            <PieChart className="cont__pie"
                 series={[
                     {
                     data: [
