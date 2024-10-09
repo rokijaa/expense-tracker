@@ -29,8 +29,10 @@ a{
 
 .cont__user{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .cont__pie{
-
+    
 }
