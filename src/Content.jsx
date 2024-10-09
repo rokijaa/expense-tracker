@@ -15,13 +15,15 @@ export function Content() {
                         { id: 2, value: 150000, label: "Business"},
                     ],
                     outerRadius: 100,
-                    innerRadius: 80,
+                    innerRadius: 90,
                     label: "siblby",
                     },
                 ]}
                 width={400}
                 height={200}
-            />
+            >
+            <div>2,338,035</div>
+            </PieChart>
         </div>
     )
 }
