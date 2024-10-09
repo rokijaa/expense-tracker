@@ -29,10 +29,11 @@ a{
 
 .cont__user{
     display: flex;
+    margin: 0 10vh;
+}
+.cont__networth{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.cont__pie{
-    
 }
