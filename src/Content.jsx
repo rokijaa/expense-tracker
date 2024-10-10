@@ -33,13 +33,14 @@ function PieCenterLabel({ children }) {
   }
 
 export function Content() {
+
     return(
         <div className="cont__user">
             <div className="cont__networth">
                 <h1>Networth</h1>
                 <PieChart className="cont__pie" 
                     series={[{ data, innerRadius: 80 }]} {...size}>
-                <PieCenterLabel>19844513$</PieCenterLabel>
+                <PieCenterLabel>{}</PieCenterLabel>
                 </PieChart>
             </div>
             <div className="cont__chart"></div>
