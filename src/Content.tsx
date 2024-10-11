@@ -35,7 +35,7 @@ function PieCenterLabel({ children }) {
   
   
   export function Content() {
-    const [networth, setNetworth] = useState(19815317898)
+    const [networth, setNetworth] = useState('19815317898')
 
     
     return(
@@ -46,11 +46,11 @@ function PieCenterLabel({ children }) {
                     series={[{ data, innerRadius: 80 }]} {...size}>
                 <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
-                <form onSubmit={() => {}}>
+                <div>
                   <label htmlFor="">Pičo napiš</label>
-                  <input type="text" onChange={e => {setNetworth()}}/>
+                  <input type="text" onSubmit={e => {setNetworth(e.target.value)}}/>
                   <button type="submit">Submit</button>
-                </form>
+                </div>
             </div>
             <div className="cont__chart"></div>
             <div className="cont__stats"></div>
