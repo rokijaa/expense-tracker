@@ -37,9 +37,6 @@ function PieCenterLabel({ children }) {
   export function Content() {
     const [networth, setNetworth] = useState(19815317898)
 
-    function handleNetworth(){ 
-      setNetworth(ammountInputId);
-    }
     
     return(
       <div className="cont__user">
@@ -49,10 +46,10 @@ function PieCenterLabel({ children }) {
                     series={[{ data, innerRadius: 80 }]} {...size}>
                 <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
-                <form>
-                  <label for="ammount">Ammount:</label>
-                  <input type="text" placeholder="Enter an ammount:"/>
-                  <input type="button"/>
+                <form onSubmit={() => {}}>
+                  <label htmlFor="">Pičo napiš</label>
+                  <input type="text" onChange={e => {setNetworth()}}/>
+                  <button type="submit">Submit</button>
                 </form>
             </div>
             <div className="cont__chart"></div>
