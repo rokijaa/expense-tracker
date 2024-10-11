@@ -33,18 +33,24 @@ function PieCenterLabel({ children }) {
       </StyledText>
     );
   }
-
-export function Content() {
+  
+  
+  export function Content() {
     const [networth, setNetworth] = useState(19815317898)
-
+    
+    function handleNetworth(){ 
+      setNetworth(50200);
+    }
+    
     return(
-        <div className="cont__user">
+      <div className="cont__user">
             <div className="cont__networth">
                 <h1>Networth</h1>
                 <PieChart className="cont__pie" 
                     series={[{ data, innerRadius: 80 }]} {...size}>
                 <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
+                <button onClick={handleNetworth}>Click me!</button>
             </div>
             <div className="cont__chart"></div>
             <div className="cont__stats"></div>
