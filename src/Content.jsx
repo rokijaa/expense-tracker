@@ -2,6 +2,7 @@ import { ChartContainer, PieChart } from "@mui/x-charts"
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
+import { useState } from "react";
 import './content.scss'
 
 const data = [
@@ -11,17 +12,18 @@ const data = [
     { value: 20, label: 'Plan D' },
   ];
   
-  const size = {
-    width: 400,
-    height: 200,
-  };
+
+const size = {
+  width: 400,
+  height: 200,
+};
   
-  const StyledText = styled('text')(({ theme }) => ({
-    fill: theme.palette.text.primary,
-    textAnchor: 'middle',
-    dominantBaseline: 'central',
-    fontSize: 20,
-  }));
+const StyledText = styled('text')(({ theme }) => ({
+  fill: theme.palette.text.primary,
+  textAnchor: 'middle',
+  dominantBaseline: 'central',
+  fontSize: 20,
+}));
 
 function PieCenterLabel({ children }) {
     const { width, height, left, top } = useDrawingArea();
@@ -33,6 +35,7 @@ function PieCenterLabel({ children }) {
   }
 
 export function Content() {
+    const [networth, setNetworth] = useState(19815317898)
 
     return(
         <div className="cont__user">
@@ -40,7 +43,7 @@ export function Content() {
                 <h1>Networth</h1>
                 <PieChart className="cont__pie" 
                     series={[{ data, innerRadius: 80 }]} {...size}>
-                <PieCenterLabel>{}</PieCenterLabel>
+                <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
             </div>
             <div className="cont__chart"></div>
