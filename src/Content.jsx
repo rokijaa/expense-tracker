@@ -1,7 +1,6 @@
 import { ChartContainer, PieChart } from "@mui/x-charts"
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles';
-import * as React from 'react';
 import { useState } from "react";
 import './content.scss'
 
@@ -37,9 +36,9 @@ function PieCenterLabel({ children }) {
   
   export function Content() {
     const [networth, setNetworth] = useState(19815317898)
-    
+
     function handleNetworth(){ 
-      setNetworth(50200);
+      setNetworth(ammountInputId);
     }
     
     return(
@@ -50,7 +49,11 @@ function PieCenterLabel({ children }) {
                     series={[{ data, innerRadius: 80 }]} {...size}>
                 <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
-                <button onClick={handleNetworth}>Click me!</button>
+                <form>
+                  <label for="ammount">Ammount:</label>
+                  <input type="text" placeholder="Enter an ammount:"/>
+                  <input type="button"/>
+                </form>
             </div>
             <div className="cont__chart"></div>
             <div className="cont__stats"></div>
