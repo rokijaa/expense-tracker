@@ -47,9 +47,13 @@ function PieCenterLabel({ children }) {
                 <PieCenterLabel>{networth}</PieCenterLabel>
                 </PieChart>
                 <div>
-                  <label htmlFor="">Pičo napiš</label>
-                  <input type="text" onSubmit={e => {setNetworth(e.target.value)}}/>
-                  <button type="submit">Submit</button>
+                <input 
+                  type="text" 
+                  value={inputValue} 
+                  onChange={handleInputChange} 
+                  placeholder="Type something here" 
+                />
+                <button onClick={handleButtonClick}>Submit</button>
                 </div>
             </div>
             <div className="cont__chart"></div>
