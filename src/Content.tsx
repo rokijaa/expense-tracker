@@ -24,6 +24,8 @@ const StyledText = styled('text')(({ theme }) => ({
   fontSize: 20,
 }));
 
+
+
 function PieCenterLabel({ children }) {
     const { width, height, left, top } = useDrawingArea();
     return (
@@ -35,16 +37,29 @@ function PieCenterLabel({ children }) {
   
   
   export function Content() {
-    const [networth, setNetworth] = useState('19815317898')
+  
+    const [inputValue, setInputValue] = useState<string>('');
+  
+    // State for the displayed text
+    const [displayText, setDisplayText] = useState<string>('');
+  
+    // Update inputValue as the user types in the input field
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value);
+    };
+  
+    // When the button is clicked, update the displayed text
+    const handleButtonClick = () => {
+      setDisplayText(inputValue);
+    };
 
-    
     return(
       <div className="cont__user">
             <div className="cont__networth">
                 <h1>Networth</h1>
                 <PieChart className="cont__pie" 
                     series={[{ data, innerRadius: 80 }]} {...size}>
-                <PieCenterLabel>{networth}</PieCenterLabel>
+                <PieCenterLabel>{displayText}</PieCenterLabel>
                 </PieChart>
                 <div>
                 <input 
