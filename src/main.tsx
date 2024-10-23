@@ -5,7 +5,9 @@ import { Content } from './Content.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Navbar />
-    <Content />
+    <div className="webwrap">
+      <Navbar />
+      <Content />
+    </div>
   </StrictMode>,
 )
